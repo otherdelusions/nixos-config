@@ -8,7 +8,11 @@
         name: svc:
         let
           nameCell = if svc.path != "" then "[`${name}`](${svc.path})" else "`${name}`";
-          icon = if svc.iconUrl != "" then ''<img src="${svc.iconUrl}" width=${iconSize} height=${iconSize} style="object-fit: contain;" />'' else "-";
+          icon =
+            if svc.iconUrl != "" then
+              ''<div style="width:${iconSize}px;height:${iconSize}px;display:flex;justify-content:center;align-items:center"><img src=${svc.iconUrl} style="max-width:100%;max-height:100%"></div>''
+            else
+              "-";
           desc = if svc.description != "" then svc.description else "-";
         in
         "| ${nameCell} | ${desc} | ${icon} |";
