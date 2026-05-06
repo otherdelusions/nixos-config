@@ -3,11 +3,12 @@
   perSystem =
     { pkgs, ... }:
     let
+      iconSize = "48";
       mkRow =
         name: svc:
         let
           nameCell = if svc.path != "" then "[`${name}`](${svc.path})" else "`${name}`";
-          icon = if svc.iconUrl != "" then "![](${svc.iconUrl})" else "-";
+          icon = if svc.iconUrl != "" then ''<img src="${svc.iconUrl}" width=${iconSize} height=${iconSize} />'' else "-";
           desc = if svc.description != "" then svc.description else "-";
         in
         "| ${nameCell} | ${desc} | ${icon} |";
