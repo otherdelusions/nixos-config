@@ -38,6 +38,7 @@
           fix = "!f() { git commit -m \"fix($1): $2\"; }; f";
           refactor = "!f() { git commit -m \"refactor($1): $2\"; }; f";
           style = "!f() { git commit -m \"style($1): $2\"; }; f";
+          fmt = "!f() { git commit -m \"style($1): formatting\"; }; f";
           test = "!f() { git commit -m \"test($1): $2\"; }; f";
         };
       };
