@@ -8,7 +8,11 @@
         name: svc:
         let
           nameCell = if svc.path != "" then "[`${name}`](${svc.path})" else "`${name}`";
-          icon = if svc.iconUrl != "" then ''<img src="${svc.iconUrl}" width="${iconSize}">'' else "-";
+          icon =
+            if svc.iconUrl != "" then
+              ''<img src="${svc.iconUrl}" width="${iconSize}" alt="${name} icon">''
+            else
+              "-";
           desc = if svc.description != "" then svc.description else "-";
         in
         "| ${nameCell} | ${desc} | ${icon} |";
@@ -17,7 +21,7 @@
         name = "homelab-services-table";
         text = ''
           | service | description | icon |
-          |---------|-------------|------|
+          | --- | --- | --- |
           ${lib.concatStringsSep "\n" (lib.mapAttrsToList mkRow self.homelabServices)}
         '';
       };

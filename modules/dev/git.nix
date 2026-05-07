@@ -45,6 +45,7 @@
 
       ignores = [
         ".direnv"
+        ".pre-commit-config.yaml"
       ];
     };
   };
