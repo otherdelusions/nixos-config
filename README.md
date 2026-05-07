@@ -1,6 +1,7 @@
 # WIP
 
 [![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/otherdelusions/nixos-config)
 
 <!-- homelab-services:start -->
 | service | description | icon |
