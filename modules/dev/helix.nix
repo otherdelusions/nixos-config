@@ -19,7 +19,11 @@
               mouse = false;
               bufferline = "multiple";
               color-modes = true;
-              "cursor-shape".insert = "bar";
+              "cursor-shape" = {
+                normal = "block";
+                insert = "bar";
+                select = "block";
+              };
               completion-replace = true;
               "indent-guides" = {
                 render = false;
